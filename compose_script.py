@@ -79,7 +79,6 @@ def container_monitor():
 
             # Check if a container is running
             if container_status == "running":
-                print(current_time - global_time)
                 if global_time > 0 and current_time - global_time > container_time_limit:
                     # Automatically stop the container
                     stop_container(container_name_or_id)
